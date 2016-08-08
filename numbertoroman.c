@@ -24,32 +24,34 @@ int main(){
         }
         number%=1000;//Modulo operation:gets the remainder then assign it to 'number' variable
     }
+    
     if(number>99){//if number is between 99 - 1000 do the following block of code
         hundreds = number/100;//divide the user input by 1000,
-        if(hundreds<=3){//if 'number' is < 4,such as 1,2,3 proceed to for loop
+        if(hundreds<=3){//if 'hundreds' is < 4,such as 1,2,3 proceed to for loop
             for(temp = 1;temp<=hundreds ;temp++){
                 printf("C");//100
             }
         }
-        if(hundreds==4){
+        if(hundreds==4){//if hundreds is exactly equal to 4
             printf("CD");//400
         }
-        if(hundreds>=5 && hundreds < 9){
+        if(hundreds>=5 && hundreds < 9){//if 'hundreds' is equal to 5,Display D
             printf("D");//500
-            for(temp=0;temp<hundreds-5;temp++){
+            for(temp=0;temp<hundreds-5;temp++){//do this portion if 'hundreds' is not equal to zero when less with '5'
                 printf("C");
             }
         }
-        if(hundreds == 9){
+        if(hundreds == 9){//if 'hundreds' is exactly equal to 9
             printf("CM");
         }
 
-        number%=100;
+        number%=100;//Modulo Operation.Get the remainder and assign it as a new value to 'number'
     }
-    if(number>9){
-        tens = number/10;
-        if(tens<=3){
-            for(temp = 1;temp<=tens ;temp++){
+    
+    if(number>9){//if 'number' is greater than 9
+        tens = number/10;//divide number by 10 and assign to 'tens'
+        if(tens<=3){//if 'tens' is < 4,such as 1,2,3 proceed to for loop
+            for(temp = 1;temp<=tens ;temp++){//loop starting from 1 until reaches the value of variable 'tens'
                 printf("X" );//10,20,30
             }
         }
@@ -58,32 +60,33 @@ int main(){
         }
         if(tens>=5 && tens < 9){
             printf("L");//50,60,70,80
-            for(temp=0;temp<tens-5;temp++){
+            for(temp=0;temp<tens-5;temp++){//do this portion if 'tens' is not equal to zero when less with '5'
                 printf("X");
             }
         }
-        if(tens == 9){
+        if(tens == 9){//if 'tens' is exactly equal to 9
             printf("XC");
         }
-    number%=10;
+    number%=10;//Modulo Operation.Get the remainder and assign it as a new value to 'number'
     }
+    
     if(number<10){
-    ones = number/1;
+    ones = number/1;//divide number by 1 and assign to 'ones'
         if(ones<=3){
-            for(temp = 1;temp<=ones ;temp++){
+            for(temp = 1;temp<=ones ;temp++){//loop starting from 1 until reaches the value of variable 'ones'
                 printf("I");//1,2,3
             }
         }
         if(ones==4){
             printf("IV");//4
         }
-        if(ones>=5 && ones < 9){
+        if(ones>=5 && ones < 9){//if 'ones' is equal to 5,Display V
             printf("V");//5,6,7,8
-            for(temp=0;temp<ones-5;temp++){
+            for(temp=0;temp<ones-5;temp++){//do this portion if 'ones' is not equal to zero when less with '5'
                 printf("I");
             }
         }
-        if(ones == 9){
+        if(ones == 9){//if 'ones' is exactly equal to 9
             printf("IX");
         }
     }
